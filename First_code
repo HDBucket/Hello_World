@@ -1,0 +1,62 @@
+
+
+This is my first code.
+I said that i'm n00b so don't judge me.
+
+I use NetBeans IDE 8.2 texteditor for JAVA applications.
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+package javaapplication1;
+/**
+ * @author Veikko
+ */
+import java.util.Scanner;
+
+public class JavaApplication1 {
+
+    private static Scanner input = new Scanner(System.in);
+
+    public static void main(String[] args) {
+        /**
+         * Password and username protection
+         */
+        while (true) {       
+        System.out.print("Username: ");
+        String username = input.nextLine();
+        System.out.print("Password: ");
+        String password = input.nextLine();
+        
+        try {
+    Thread.sleep(3000); 
+} catch (InterruptedException e) {
+    e.printStackTrace();
+}
+        
+        if (username.equals("#") && password.equals("#")) {
+            break;
+              }
+                 System.out.println("Try different username or password!");
+              }
+          System.out.println("Welcome!");
+          
+	  System.out.print("What's your name? ");
+	    String name = input.nextLine();
+              
+            while (true) {
+                System.out.print("How old are you? ");
+                int age = Integer.parseInt(input.nextLine());
+                if (age >= 0 && age <= 120) {
+                    break;
+                }
+                System.out.println("That's not your age!");
+            }
+            System.out.println("Thank you!");
+            
+	      System.out.println("hello, " + name + "!");
+            System.out.print ("Whats your hobby? ");
+          String hobby = input.nextLine();
+        System.out.println ("So, your name is " + name + " and your hobby is " + hobby + ".");
+        System.out.print("I don't have hobby.");
+    }
+}
